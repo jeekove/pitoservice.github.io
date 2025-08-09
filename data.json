@@ -1,0 +1,117 @@
+[
+  {
+    "id": "felni",
+    "image": "image/product/mero.webp",
+    "title": "Încărcător Fulbat 1000 - 6V/12V 1A",
+    "oldPrice": "680 lei",
+    "newPrice": "499 lei",
+    "category": "akcio"
+  },
+  {
+    "id": "kesztyu",
+    "image": "image/product/kezvedo.webp",
+    "title": "Handguard Acerbis X-Force Orange",
+    "oldPrice": "270 lei",
+    "newPrice": "229 lei",
+    "category": "akcio"
+  },
+  {
+    "id": "sisak",
+    "image": "image/product/gumi.webp",
+    "title": "Cauciuc 180/55-17 Michelin Pilot Power 2CT",
+    "oldPrice": "540 lei",
+    "newPrice": "449 lei",
+    "category": "akcio"
+  },
+  {
+    "id": "villa",
+    "image": "image/product/lanc.webp",
+    "title": "Lant distributie KTM 250 05-08",
+    "oldPrice": "890 lei",
+    "newPrice": "819 lei",
+    "category": "akcio"
+  },
+  {
+    "id": "villa",
+    "image": "image/product/lanc.webp",
+    "title": "Lant distributie KTM 250 05-08",
+    "oldPrice": "890 lei",
+    "newPrice": "819 lei",
+    "category": "akcio"
+      },
+  {
+    "id": "villa",
+    "image": "image/product/lanc.webp",
+    "title": "Lant distributie KTM 250 05-08",
+    "oldPrice": "890 lei",
+    "newPrice": "819 lei",
+    "category": "akcio"
+      }, 
+
+
+
+
+
+
+
+  {
+    "id": "villa",
+    "image": "image/product/kipufogo1.jpg",
+    "title": "Akrapovic Slip-On Exhausts",
+    
+    "newPrice": "819 lei"
+      },
+  {
+    "id": "villa",
+    "image": "image/product/fekbetet.jpg",
+    "title": "EBC Double-H Sintered Front Brake Pads",
+    "newPrice": "819 lei"
+      },
+  {
+    "id": "villa",
+    "image": "image/product/kipufogo2.jpg",
+    "title": "LeoVince LV-10 Slip-On Exhaust",
+    "newPrice": "819 lei"
+      },
+  {
+    "id": "villa",
+    "image": "image/product/aksi1.jpg",
+    "title": "Yuasa AGM Battery",
+    "newPrice": "819 lei"
+      },
+  {
+    "id": "villa",
+    "image": "image/product/dampers.jpg",
+    "title": "Ohlins Steering Dampers",
+    "newPrice": "819 lei"
+    },
+  {
+    "id": "villa",
+    "image": "image/product/aksi2.jpg",
+    "title": "Yuasa High Performance AGM Battery",
+    "newPrice": "819 lei"
+  },  {
+    "id": "villa",
+    "image": "image/product/kipufogo2.jpg",
+    "title": "LeoVince LV-10 Slip-On Exhaust",
+    "newPrice": "819 lei"
+      },
+  {
+    "id": "villa",
+    "image": "image/product/aksi1.jpg",
+    "title": "Yuasa AGM Battery",
+    "newPrice": "819 lei"
+      },
+  {
+    "id": "villa",
+    "image": "image/product/dampers.jpg",
+    "title": "Ohlins Steering Dampers",
+    "newPrice": "819 lei"
+    },
+  {
+    "id": "villa",
+    "image": "image/product/aksi2.jpg",
+    "title": "Yuasa High Performance AGM Battery",
+    "newPrice": "819 lei"
+  }
+]

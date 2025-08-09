@@ -1,0 +1,765 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+   font-family: Arial, Helvetica, sans-serif;
+}
+body::selection {
+  background-color: #ff1e1e9f;     
+}
+/* WebKit böngészők (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;               /* görgetősáv szélessége */
+  height: 12px;              /* vízszintes scroll esetén magasság */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;       /* a scrollbar háttere */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;    /* a "fogantyú" színe */
+  border-radius: 6px;
+  border: 3px solid #f0f0f0; /* körülötte "keret" */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #cc0101;    /* hover állapot */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;     /* vastagság: auto, thin, none */
+  scrollbar-color: #888 #f0f0f0; /* fogantyú szín, track szín */
+}
+nav{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    height: 100px;
+    align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+} 
+.navmobile{
+  display: none;
+}
+.navmenu{
+  width: 100%;     
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.2s;
+}
+nav .logo img{
+    width: auto;
+    height: 50px;
+    margin: 14px 0 0 0;
+}
+nav span{
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    top: -120px;
+    left: -50px;
+    background-color: #d32f2f;
+    transform: rotate(45deg);
+}
+.userpanel{
+    display: flex;
+    margin: 20px 0;
+}
+.search {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 30px;
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: 1px solid gray;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 50px;
+}
+.search:hover{
+  background-color: #44444436;
+      border: 1px solid #44444436;
+}
+.search i {
+    margin-right: 8px;
+    font-size: 22px;
+    transition: opacity 0.3s ease;
+}
+.search h2 {
+    font-size: 20px;
+    margin: 0;
+    transition: opacity 0.3s ease;
+    font-weight: normal;
+}
+.search-input {
+    display: none;
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    padding-left: 10px;
+}
+.search-input::placeholder {
+  font-weight: normal;
+  color:black;
+}
+.search.active i,
+.search.active h2 {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+.search.active .search-input {
+    display: block;
+}
+
+.userp {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.userp i {
+  font-size: 28px;
+  cursor: pointer;
+  padding: 4px 0 0 0;
+}
+
+#popupUser, #popupCart {
+  position: fixed;
+  top: 100px;
+  right: 700px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#popupUser.show, #popupCart.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#popupUser a, #popupCart a {
+  text-decoration: none;
+  color: black;
+}
+
+#popupUser h1{
+  margin: 10px;
+  font-size: 20px;
+}
+#popupCart h1{
+  font-size: 20px;
+}
+
+#popupCart h3{
+  background-color: #d32f2f;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+}
+#popupCart p{
+  font-size: 14px;
+  color: gray;
+  padding: 50px 20px;
+}
+  .navbottom {
+box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;      display: flex;
+      justify-content: space-between;
+        align-items: center; 
+      position: relative;
+      overflow: hidden; /* a span miatt kell */
+      z-index: 10;
+      height: 50px;
+    }
+    .navbotmenu{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1150px;
+      margin: 0 auto;
+      transition: 0.2s;
+    }
+    .navbottom h1 {
+      position: relative;
+      font-weight: normal;
+      font-size: 18px;
+      padding: 14px 0;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      transition: 0.2s;
+    }
+
+    .navbottom h1:hover{
+      color: red;
+    }
+
+    .navbottom span {
+      position: absolute;
+      height: 300px;
+      width: 100px;
+      top: -100px;
+      left: -50px;
+      background-color: #d32f2f;
+      transform: rotate(135deg);
+    }
+    .menu-wrapper {
+      position: relative;
+      z-index: 5;
+    }
+
+.dropdown {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  background-color: #fdfdfd;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  top: 150px; 
+  padding: 10px;
+  margin-left: -8px;
+  width: 200px;
+  transition: opacity 0.2s ease;
+  pointer-events: none; /* hogy ne zavarja az egér eseményeket, ha rejtve van */
+}
+
+.nav-item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+    .dropdown a {
+      display: block;
+      padding: 8px 16px;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .dropdown a:hover {
+      background-color: #aaaaaa7a;
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+            transition: 0.2s;
+    }
+
+    /* Hovernél jelenjen meg a dropdown */
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-item:hover .dropdown {
+      display: block;
+    }
+ .carousel {
+      position: relative;
+      margin: 0 auto;
+      width: 1500px;
+      height: 700px;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      width: 2000px;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+.slide {
+  width: 100%;
+  max-width: 1500px; /* ne nőjön túl nagyra */
+  aspect-ratio: 15 / 8;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* teljes kép látszik */
+  object-position: center;
+}
+.slide-text {
+  position: relative;
+  top: -450px;
+  left: 120px;
+  color: white;
+  font-size: 18px;
+  text-align: left;
+  width: 570px;
+}
+.slide-text h1 {
+  font-size: 30px;
+  background-color: #141414;
+}
+
+.slide-text h2 {
+  font-size: 22px;
+  background-color: #d32f2f;
+  color: #ffffff;
+}
+.slide-text a:hover{
+    transition: 0.2s; 
+    background-color: rgba(255, 19, 19, 0.26);
+}
+.nav {
+    position: relative;
+    top: -350px;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    }
+.nav button {
+    color: white;
+    font-size: 35px;
+    padding: 7px 12px;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(155, 155, 155, 0.363);
+    backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px); 
+    border-radius: 100px;
+}
+.sales{
+  max-width: 1150px;
+  margin: 0 auto;
+  z-index: 2; 
+  background-color: white;
+  position: relative; 
+  justify-content: a;
+  top: -100px;
+  padding: 40px 0;
+}
+.sales::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #d32f2f;
+}
+.sales h2{
+    font-size: 50px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.salcubes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px ;
+    justify-content: center;
+}
+
+.sales .salescube {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+                rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    width: 220px;
+    padding: 20px;
+    transition: 0.3s ease;
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.sales .salescube:hover {
+    transform: scale(0.97);
+    border: 1px solid gray;
+    border-radius: 16px;
+}
+
+/* Kép */
+.sales img {
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* Terméknév */
+.sales h1 {
+    font-size: 15px;
+    color: #141414;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-weight: bold;
+}
+
+/* Régi ár */
+.sales p {
+    font-size: 14px;
+    color: #888;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+}
+
+/* Akciós ár */
+.sales h3 {
+    font-size: 20px;
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 5px 0;
+    border-radius: 4px;
+    margin: 0 auto;
+    width: 100px;
+    font-weight: bold;
+}
+.nextcontent{
+  flex: 1;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.nextcontent h1{
+  font-size: 35px;
+}
+.ncubes {
+  padding: 50px 0px;
+}
+
+.productcubes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 80px;  /* a távolságok a rácsban */
+  justify-content: center;  /* középre igazítás */
+  max-width: 1150px;        /* max szélesség, opcionális */
+  margin: 0 auto;           /* középre az oldalhoz képest */
+}
+
+.productcubes .cubes {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+              rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 20px;
+  width: 220px;    
+  box-sizing: border-box;
+}
+
+.cubes:hover {
+  border: 1px solid #999999;
+}
+/* Kép */
+.cubes img {
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Terméknév */
+.cubes h1 {
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 0;
+  height: 60px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+/* Ár + ikon konténer */
+.cubes .buttpri {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+/* Ár */
+.cubes .buttpri h3 {
+  color: #d32f2f;
+  font-size: 22px;
+  margin: 0;
+}
+
+/* Kosár ikon */
+.cubes .buttpri i {
+  background-color: #d32f2f;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s;
+  border: 1px solid #d32f2f;
+}
+
+.cubes .buttpri i:hover {
+  background-color: white;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}
+.nextbuttonsearch{
+  text-align: center;
+  padding: 0 30px 100px 0;
+}
+.nextbuttonsearch a{
+  background-color: #d32f2f;
+  padding: 15px 40px;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+    border: 1px solid #d32f2f;
+    transition: 0.2s;
+}
+.nextbuttonsearch i{
+  padding: 0 0  0 20px;
+}
+.nextbuttonsearch a:hover{
+  background-color: white;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.bottomcontent{
+  background-color: #d32f2f;
+  color: white;
+}
+.bottomcontent h1{
+  font-size: 18px;
+  font-weight: normal; 
+}
+.bottomcontent h2{
+  font-size: 15px;
+  padding: 5px;
+  text-align: center;
+}
+.supportbot{
+    max-width: 1150px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 0px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+.supportbot .data{
+  margin-top: 50px;
+}
+.supportbot .data h1{
+  cursor: pointer;
+  margin: 10px 0;
+}
+.supportbot .data h1:hover{
+  text-decoration: underline;
+}
+.supportbot .support {
+  margin: 50px 0;
+}
+.supportbot .support i{
+  color: white;
+ font-size: 20px;
+ margin: 10px;
+}
+
+
+@media (max-width: 1550px) {
+.navmenu{    
+  max-width: 800px;
+}
+.navbotmenu{
+  max-width: 800px;
+}
+.ncubes{
+  width: 800px;
+  margin: 0 auto;
+}
+
+}
+
+
+
+@media (max-width: 1200px) {
+  nav{
+    box-shadow: none;
+  }
+  .navmobile{
+    position: absolute;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    margin-top: -80px;
+    align-items: center;
+  }
+  .navmobile .logo img{
+    width: auto;
+    height: 40px;
+  }
+  .menubuthelp{
+    padding: 35px;
+  }
+  .mobile-menu-icon {
+  padding: 20px;
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.mobile-menu-icon span {
+  display: block;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+}
+  nav span{
+    left: -200px;
+  }
+  nav img{
+    display: none;
+  }
+  .userpanel{
+    display: none;
+  }
+  .navbottom{
+    display: none;
+  }
+.carousel {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* ezt JS-ben felülírhatod */
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 100%; /* slide mindig pontosan a carousel szélesség */
+  height: 400px; /* vagy arányosan, pl aspect-ratio */
+  position: relative;
+  cursor: pointer;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.slide-text{
+  top: -250px;
+  left: 20px;
+  width: 300px;
+}
+.slide-text h1{
+  font-size: 16px;
+}
+.slide-text h2{
+  font-size: 14px;
+}
+.sales{
+   margin: 0 15px;
+   top: -80px;
+}
+.sales::before{
+  height: 5px;
+}
+.sales h2{
+  font-size: 24px;
+  padding: 0 20px;
+  margin-top: -10px;
+}
+.sales .salescube {
+  width: 120px;
+}
+.sales img{
+  height: 120px;
+}
+  .nextcontent{
+    margin: 0 15px;
+  }
+  .productcubes {
+  gap: 15px 20px;  
+}
+  .productcubes .cubes {
+    width: 160px;
+    padding: 10px;
+}
+.ncubes{
+  width: auto;
+  margin: 0 auto;
+}
+.cubes img {
+  height: 130px;
+}
+.cubes h1{
+  font-size: 16px;
+}
+.cubes .buttpri h3 {
+  font-size: 18px;
+}
+.cubes .buttpri i{
+  font-size: 16px;
+}
+.nextbuttonsearch{
+  padding: 0px 0 50px 0;
+}
+
+.nextbuttonsearch a{
+  font-size: 20px;
+  padding: 10px 20px;
+}
+.supportbot{
+  display: block;
+  text-align: center;
+}
+.supportbot .data{
+  padding: 30px 0;
+}
+.supportbot .data h1{
+  font-size: 16px;
+}
+.supportbot .support{
+  margin: 10px 0;
+}
+.supportbot .support i{
+  margin: 5px 10px;
+  font-size: 13px;
+}
+.supportbot .support h1{
+  font-size: 13px;
+}
+.bottomcontent .socialicon a i{
+  padding: 20px 0;
+  font-size: 20px;
+}
+}
