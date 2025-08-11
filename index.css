@@ -481,6 +481,7 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 
   height: 60px;
   overflow: hidden;
   font-weight: bold;
+  color: #141414;
 }
 
 /* Ár + ikon konténer */
@@ -583,6 +584,28 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 
 }
 
 
+.error{
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin: 150px auto;
+  justify-content: space-between;
+}
+.error h1{
+  color: #d32f2f;
+  font-size: 60px;
+}
+.error h2{
+  font-size: 20px;
+  font-weight: normal;
+  width: 700px;
+}
+.error img{
+  height: auto;
+  width: 300px;
+}
+
+
 @media (max-width: 1550px) {
 .navmenu{    
   max-width: 800px;
@@ -672,6 +695,7 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 
 .slide img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   object-position: center;
 }
@@ -718,6 +742,9 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 
   width: auto;
   margin: 0 auto;
 }
+.nextcontent h1{
+  font-size: 25px;
+}
 .cubes img {
   height: 130px;
 }
@@ -761,5 +788,28 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 
 .bottomcontent .socialicon a i{
   padding: 20px 0;
   font-size: 20px;
+}
+
+
+.error{
+  text-align: center;
+  display: block;
+  width: 60%;
+  max-width: 600px;
+  margin: 150px auto;
+  justify-content: space-between;
+}
+.error h1{
+  color: #d32f2f;
+  font-size: 35px;
+}
+.error h2{
+  font-size: 18px;
+  font-weight: normal;
+  width: auto;
+}
+.error img{
+  height: auto;
+  width: 200px;
 }
 }

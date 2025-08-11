@@ -163,7 +163,7 @@ fetch('data.json')
     const shuffledNormal = shuffle(normalProducts);
 
     // max 4 akciós
-    const displayedSales = saleProducts.length > 4 ? shuffle(saleProducts).slice(0,4) : saleProducts;
+    const displayedSales = saleProducts.length > 4 ? shuffle(saleProducts).slice(0, 4) : saleProducts;
 
     // max 8 normál
     const displayedNormal = shuffledNormal.slice(0, 8);
@@ -183,17 +183,19 @@ fetch('data.json')
       saleContainer?.appendChild(div);
     });
 
-    // megjelenítés normálok
+    // megjelenítés normálok (teljes kocka kattintható)
     displayedNormal.forEach(product => {
       const div = document.createElement('div');
       div.classList.add('cubes');
       div.innerHTML = `
-        <img src="${product.image}" alt="${product.title}">
-        <h1>${product.title}</h1>
-        <div class="buttpri">
-          <a href="product.html?id=${product.id}"><i class="fa-solid fa-basket-shopping"></i></a>
-          <h3>${product.newPrice}</h3>
-        </div>
+        <a href="product.html?id=${product.id}">
+          <img src="${product.image}" alt="${product.title}">
+          <h1>${product.title}</h1>
+          <div class="buttpri">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <h3>${product.newPrice}</h3>
+          </div>
+        </a>
       `;
       normalContainer?.appendChild(div);
     });
@@ -201,3 +203,32 @@ fetch('data.json')
   .catch(error => {
     console.error('Hiba a termékek betöltésekor:', error);
   });
+
+
+  // Lekérjük az URL-ből a product ID-t
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get('id');
+
+  if (productId) {
+    fetch('data.json')
+      .then(response => response.json())
+      .then(products => {
+        const product = products.find(p => p.id == productId);
+        if (product) {
+          // Kitöltjük a HTML elemeket
+          document.getElementById('product-image').src = product.image;
+          document.getElementById('product-image').alt = product.title;
+
+          document.getElementById('product-title').textContent = product.title;
+
+          // Ha van régi ár, akkor mutassuk, különben üres
+          document.getElementById('product-oldprice').textContent = product.oldPrice ? `Régi ár: ${product.oldPrice}` : '';
+          document.getElementById('product-newprice').textContent = product.newPrice;
+        } else {
+          console.error('Nincs ilyen termék ID.');
+        }
+      })
+      .catch(err => console.error('Hiba a termék betöltésekor:', err));
+  } else {
+    console.error('Nem található termék ID az URL-ben.');
+  }
