@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Kövecsi Bence portfóliója: Webfejlesztés, fényképezés és kreatív projektek. Nézd meg a munkáimat!">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="shop.css">
     <script src="https://kit.fontawesome.com/2a016e7b9d.js" crossorigin="anonymous"></script>
-    <title>Pito Motor Service</title>
+    <title>PMS - shop</title>
     <link rel="icon" href="image/logo.png" type="image/x-icon">
 </head>
 <body>
@@ -54,7 +54,7 @@
   <div class="navbottom">
     <div class="navbotmenu">
     <span></span>
-    <div class="nav-item">
+     <div class="nav-item">
       <h1>ALKATRÉSZEK</h1>
       <div class="dropdown">
         <a href="shop.html?filter=motor">Motor & Hajtáslánc</a>
@@ -105,46 +105,81 @@
     </div>
     </div>
   </div>
-<div class="carousel">
-  <div class="slides" id="slides">
-    <a href="shop.html?filter=elemek , akkumulátor"><div class="slide">
-      <img src="image/crosssetup.png" alt="1">
-      <div class="slide-text"><h1>Crossmotor alkatrészek és kiegészítők</h1><h2>Megbízható felszerelés, verhetetlen ár</h2></div>
-    </div></a>
-    <a href="error.html"><div class="slide">
-      <img src="image/turasetup.jpg" alt="2">
-      <div class="slide-text"><h1>Túramotor alkatrészek és kiegészítők</h1><h2>Minőség, amit a motor is érez</h2></div>
-    </div></a>
-    <a href="error.html"><div class="slide">
-      <img src="image/alkatreszek.jpg" alt="3">
-      <div class="slide-text"><h1>Keresse nálunk az összes alkatrészt egyszerűen és gyorsan</h1><h2>Kattints a böngészéshez.</h2></div>
-    </div></a>
-    <a href=""><div class="slide">
-      <img src="image/service.jpg" alt="4">
-        <div class="slide-text"><h1>Szakszerű szerviz, ahol a precizitás és a megbízhatóság találkozik</h1><h2>Vedd fel velünk a kapcsolatot.</h2></div>
-    </div></a>
-  </div>
-  <div class="nav">
-    <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
-    <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
-  </div>
-</div>
-<div class="sales">
-  <span></span>
-  <h2>Akciók</h2>
-  <div class="salcubes" id="products-container"></div>
-</div>
-<div class="nextcontent">
-   <h1>További termékek</h1>
-   <div class="ncubes">
-    <div class="productcubes" id="normal-products-container"></div>
+  <div class="shopcontent">
+     <div class="shopfilter">
+          <h6>Szűrő</h6>
+        <div>
+  <div class="shop-item">
+    <h1>ALKATRÉSZEK <span>+</span></h1>
+    <div class="dropdownshop">
+      <label class="custom-checkbox"><input type="checkbox" data-tag="Motor"><span class="checkmark"><i class="fa-solid fa-check"></i></span> Motor & Hajtáslánc</label>
+      <label class="custom-checkbox"><input type="checkbox" data-tag="Fekek"><span class="checkmark"><i class="fa-solid fa-check"></i></span> Fékek</label>
+      <label class="custom-checkbox"><input type="checkbox" data-tag="Futomu"><span class="checkmark"><i class="fa-solid fa-check"></i></span> Futómű</label>
     </div>
-   </div>
-   <div class="nextbuttonsearch">
-     <a href="shop.html">Böngész tovább<i class="fa-solid fa-arrow-right"></i></a>
-   </div>
+  </div>
+
+  <div class="shop-item">
+    <h1>ELEKTROMOSÁG <span>+</span></h1>
+    <div class="dropdownshop">
+      <label class="custom-checkbox"><input type="checkbox" data-tag="akkumulátor"><span class="checkmark"><i class="fa-solid fa-check"></i></span> Akkumulátor</label>
+      <label class="custom-checkbox"><input type="checkbox" data-tag="Gyujtas"><span class="checkmark"><i class="fa-solid fa-check"></i></span> Gyújtás</label>
+      <label class="custom-checkbox"><input type="checkbox" data-tag="Lampak"><span class="checkmark"><i class="fa-solid fa-check"></i></span> Lámpák</label>
+    </div>
+  </div>
+
+  <div class="shop-item">
+    <h1>SZERVIZ <span>+</span></h1>
+    <div class="dropdownshop">
+      <label class="custom-checkbox"><input type="checkbox" data-tag="Olajok"><span class="checkmark"><i class="fa-solid fa-check"></i></span> Olajok</label>
+      <label class="custom-checkbox"><input type="checkbox" data-tag="Szűrők"><span class="checkmark"><i class="fa-solid fa-check"></i></span> Szűrők</label>
+    </div>
+  </div>
+
+  <div class="shop-item">
+    <h1>TUNING <span>+</span></h1>
+    <div class="dropdownshop">
+      <label class="custom-checkbox"><input type="checkbox" data-tag="kipufogo"><span class="checkmark"><i class="fa-solid fa-check"></i></span> Kipufogó</label>
+      <label class="custom-checkbox"><input type="checkbox" data-tag="ledek"><span class="checkmark"><i class="fa-solid fa-check"></i></span> LED</label>
+    </div>
+  </div>
+
+  <div class="shop-item">
+    <h1>KIEGÉSZTŐK <span>+</span></h1>
+    <div class="dropdownshop">
+      <label class="custom-checkbox"><input type="checkbox" data-tag="taskak"><span class="checkmark"><i class="fa-solid fa-check"></i></span> Táskák</label>
+      <label class="custom-checkbox"><input type="checkbox" data-tag="elemek"><span class="checkmark"><i class="fa-solid fa-check"></i></span> Kiegészítő idomok</label>
+      <label class="custom-checkbox"><input type="checkbox" data-tag="markolat"><span class="checkmark"><i class="fa-solid fa-check"></i></span> Markolatok</label>
+    </div>
+  </div>
+        </div>
+<div class="price-filter" id="priceFilter">
+  <div class="inputs">
+    <div class="field">
+      <label for="minPrice">Min</label>
+      <input type="number" id="minPrice" min="1" max="10000" placeholder="1">
+    </div>
+    <div class="field">
+      <label for="maxPrice">Max</label>
+      <input type="number" id="maxPrice" min="1" max="10000" placeholder="10000">
+    </div>
+  </div>
+
+  <div class="slider">
+    <div class="track"></div>
+    <div class="fill" id="rangeFill"></div>
+    <input type="range" id="minRange" min="1" max="10000" value="1" step="1">
+    <input type="range" id="maxRange" min="1" max="10000" value="10000" step="1">
+  </div>
+</script>
 </div>
-<div class="bottomcontent">
+  </div>
+     <div class="shopproduct">
+        <div class="shopcube">
+            </div>
+        </div>
+     </div>
+  </div>
+  <div class="bottomcontent">
    <div class="supportbot">
     <div class="data">
       <h1>Adatvédelmi irányelvek</h1>

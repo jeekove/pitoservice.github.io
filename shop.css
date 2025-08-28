@@ -270,238 +270,286 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 
     .nav-item:hover .dropdown {
       display: block;
     }
-.product{
-  width: 100%;     
-  max-width: 1150px;
-  margin: 0 auto;
-}
-.topprod{
+      .shopcontent{
+      width: 100%;     
+      max-width: 1150px;
+      margin: 50px auto auto auto;
+      display: flex;
+      }
+      .shopcontent h6{
+        font-size: 40px;
+        color: #d32f2f;
+      }
+  .shopcontent .shopfilter {
+    max-width: 210px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .shop-item {
+    margin-bottom: 10px;
+    transition: 0.2s;
+  }
+
+  .shop-item h1 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding: 5px  0;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
-    margin: 100px 0;
-}
-.topprod img{
-    margin: 0 50px 0 0;
-    width: auto;
-    height: 300px;
-    padding: 20px 20px;
-    border-radius: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-.topprod .producttext{
-    width: 700px;
-}
-.topprod .producttext h1{
-   font-size: 24px;
-}
-.topprod .producttext h2{
-   font-size: 20px;
-   color: rgb(52, 139, 52);
-}
-.topprod .producttext h3{
-   font-size: 20px;
-   color: #d32f2f;
-}
-.topprod .producttext p{
-   margin-top: 80px;
-   font-size: 20px;
-   color: rgb(180, 180, 180);
-}
-.topprod .producttext h5{
-   font-size: 40px;
-   color: rgb(255, 255, 255);
-   color: #d32f2f;
-   width: 125px;
-}
-.prodbutton{
-    display: flex;
-}
-.prodbutton a{
-    width: 600px;
-    padding: 20px 20px 20px 0px;
-}
-.prodbutton h6{
-    font-size: 20px;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 19px 19px;
-    width: 200px;
-    background-color: #d32f2f;
-    border-radius: 20px;
-    transition: 0.2s;
-                 border: 1px solid #ffffff;
-}
-.prodbutton h6:hover{
-  cursor: pointer;
-         background-color: #ffffff;
-             border: 1px solid #d32f2f;
-         color: #d32f2f;
-     transition: 0.2s;
-      box-shadow: rgba(255, 0, 0, 0.644) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    align-items: center;
+  }
 
-}
-.prodbutton h4{
-    top: 20px;
-    padding: 19px 19px;
-    width: 300px;
-    font-size: 20px;
-    color: #d32f2f;
-    font-weight: bold;
-    border: 1px solid #d32f2f;
-    border-radius: 20px;
-        transition: 0.2s;
-}
-.prodbutton h4:hover{
-  cursor: pointer;
-    transition: 0.2s;
-        background-color: #d32f2f;
-            border: 1px solid #ffffff;
-            color: white;
-}
-.review h1{
-    color: #d32f2f;
-    margin: 30px 0;
-}
-.review h2{
-    color: #575757;
-    margin: 50px 0  100px 0;
-    font-size: 20px;
-}
-.product .topprod span{
-   position: absolute;
-   color: white;
-   background-color: yellow;
-   font-size: 30px;
-   padding: 10px 20px;
-   border-radius: 30px;
-   transform: rotate(-25deg);
-   left: 590px;
-   font-weight: bold;
-}
-.event{
-  display: none;
-    margin: 10vh 20%;
-}
-.event img{
-    width: 1530px;
-    height: auto;
+  .dropdownshop {
+    display: none;
+  }
+
+  .dropdownshop label {
+    display: block;
     cursor: pointer;
-}
-.nextcontent{
-  flex: 1;
-  max-width: 1150px;
-  margin: 0 auto;
-}
-.nextcontent h1{
-  font-size: 35px;
-}
-.ncubes {
-  padding: 50px 0px;
+    padding: 4px 0;
+    transition: 0.2s;
+  }
+
+  /* Nyitott állapot */
+  .shop-item.open .dropdownshop {
+    display: block;
+  }
+   .custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* Eredeti checkbox eltüntetése */
+  .custom-checkbox input {
+    display: none;
+  }
+
+  /* Új kinézet */
+  .checkmark {
+    padding: 1px 3px;
+    border: 2px solid #555;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+
+  /* Ha be van jelölve */
+  .custom-checkbox input:checked + .checkmark {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5l3 3 7-7' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    background-size: 12px;
+  }
+  /* Hover effekt */
+  .custom-checkbox:hover .checkmark {
+    background-color: #808080;
+    border-color: #808080;
+    color: wheat;
+  }
+.price-filter {
+  max-width: 190px;
+  height: 50vh;
+  margin: 20px 0;
 }
 
-.productcubes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px 80px;  /* a távolságok a rácsban */
-  justify-content: center;  /* középre igazítás */
-  max-width: 1150px;        /* max szélesség, opcionális */
-  margin: 0 auto;           /* középre az oldalhoz képest */
+/* Input mezők */
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-.productcubes .cubes {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-              rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  transition: 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  border: 1px solid white;
-  padding: 20px;
-  width: 220px;    
-  box-sizing: border-box;
+.field label {
+  font-size: 12px;
+  color: #555;
 }
 
-.cubes:hover {
-  border: 1px solid #999999;
+.field input[type=number] {
+  padding: 8px 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
 }
-/* Kép */
-.cubes img {
-  height: 160px;
-  width: 180px;
-  object-fit: contain;
-  margin-bottom: 15px;
+.slider {
+  position: relative;
+  height: 38px;
 }
-
-/* Terméknév */
-.cubes h1 {
-  font-size: 16px;
-  text-align: center;
-  padding: 10px 0;
-  height: 60px;
-  overflow: hidden;
-  font-weight: bold;
-  color: #141414;
-}
-
-/* Ár + ikon konténer */
-.cubes .buttpri {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: auto;
-  padding-top: 15px;
-  border-top: 1px solid #eee;
+.slider .track,
+.slider .fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 999px;
 }
 
-/* Ár */
-.cubes .buttpri h3 {
-  color: #d32f2f;
-  font-size: 22px;
+.slider .track {
+  background: #999999;
+}
+
+.slider .fill {
+  background: #d32f2f;
+}
+
+/* Csúszka input */
+.slider input[type=range] {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  pointer-events: none; /* csak a thumb fogható */
   margin: 0;
 }
 
-/* Kosár ikon */
-.cubes .buttpri i {
-  background-color: #d32f2f;
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 8px;
-  transition: 0.2s;
-  border: 1px solid #d32f2f;
+/* WEBKIT */
+.slider input[type=range]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: transparent;
 }
 
-.cubes .buttpri i:hover {
-  background-color: white;
-  color: #d32f2f;
-  border: 1px solid #d32f2f;
-}
-.nextbuttonsearch{
-  text-align: center;
-  padding: 0 30px 100px 0;
-}
-.nextbuttonsearch a{
-  background-color: #d32f2f;
-  padding: 15px 40px;
-  font-size: 30px;
-  color: white;
-  font-weight: bold;
-  border-radius: 15px;
-    border: 1px solid #d32f2f;
-    transition: 0.2s;
-}
-.nextbuttonsearch i{
-  padding: 0 0  0 20px;
-}
-.nextbuttonsearch a:hover{
-  background-color: white;
-  color: #d32f2f;
-  border: 1px solid #d32f2f;
-  transition: 0.2s;
+.slider input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #333;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #333;
+  margin-top: -6px;
   cursor: pointer;
 }
+
+/* FIREFOX */
+.slider input[type=range]::-moz-range-track {
+  height: 6px;
+  background: transparent;
+}
+.slider input[type=range]::-moz-range-thumb {
+  pointer-events: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #333;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #333;
+  cursor: pointer;
+}
+.deletefilter{
+  text-align: center;
+  padding: 40px 10px;
+}
+.deletefilter h1{
+  color: white;
+  font-size: 18px;
+  background-color: #d32f2f;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.shopproduct{
+  padding: 50px 0px 80px 10px;
+}
+.shopcube{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.scube{
+  width: 220px;
+  text-align: center;
+   height: auto;
+   border: 1px solid #999999;
+   border-radius: 10px;
+}
+.scube img{
+  padding: 5px;
+    max-width: 180px;
+  height: 180px;
+}
+.scube h1{
+  color: #333;
+  font-weight: normal;
+  height: 50px;
+  font-size: 18px;
+  padding: 5px;
+    display: -webkit-box;         
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;     
+  line-clamp: 2;               
+  overflow: hidden;            
+  text-overflow: ellipsis;   
+  max-width: 100%;            
+  overflow-wrap: anywhere;  
+}
+.scube h3{
+  color: #d32f2f;
+  text-align: left;
+  margin-left: 10px;
+  font-size: 40px;
+}
+.scube span{
+  color: gray;
+  font-size: 13px;
+  display: block;
+  text-align: left;
+  margin: 15px 0 0 10px;
+  height: 15px;
+}
+.sbutton{
+  display: flex;
+    gap: 5px;
+   padding: 8px 2px;
+}
+.favorit{
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+  padding: 10px 40px;
+    border-radius: 10px;
+      transition: 0.2s;
+}
+.cart{
+  color: #ffffff;
+  background-color: #d32f2f;
+  border: 1px solid #d32f2f;
+  padding: 10px 40px;
+  border-radius: 10px;
+    transition: 0.2s;
+}
+.favorit:hover{
+    color: #ffffff;
+  border: 1px solid #d32f2f;
+  background-color: #d32f2f;
+  transition: 0.2s;
+}
+.cart:hover{
+  background-color: white;
+  color: #d32f2f;
+  transition: 0.2s;
+}
+.no-products{
+  font-size: 25px;
+  text-align: center;
+  width: 930px;
+}
+
+
+
 .bottomcontent{
   background-color: #d32f2f;
   color: white;
@@ -546,8 +594,6 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 
 
 
 
-
-
 @media (max-width: 1550px) {
 .navmenu{    
   max-width: 800px;
@@ -555,10 +601,8 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 
 .navbotmenu{
   max-width: 800px;
 }
-.ncubes{
-  width: 800px;
-  margin: 0 auto;
-}
+
+
 
 }
 
@@ -612,111 +656,10 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 
     display: none;
   }
 
-  .product{
-    width: auto;
-       display: block;
-       text-align: center;
-  }
-  .topprod{
-    display: block;
-        width: auto;
-  }
-  .topprod .producttext{
-    padding: 20px;
-        width: auto;
-}
-  .topprod img{
-    padding: 0;
-        width: auto;
-        box-shadow: none;
-    height: 250px;
-    margin: 0 auto;
-  }
-  .topprod .producttext h1{
-  font-size: 18px;
-}
-.topprod .producttext h2{
-  font-size: 15px;
-}
-.topprod .producttext h3{
-  font-size: 15px;
-}
 
-.topprod .producttext p{
-     margin-top: 40px;
-  font-size: 15px;
-}
-.topprod .producttext h5{
-  font-size: 37px;
-  text-align: center;
-  width: auto;
-}
-.prodbutton{
-  display: block;
-  padding: 30px;
-}
-.prodbutton h4{
-  font-size: 17px;
-  width: auto;
-  padding: 10px;
-  border-radius: 10px;
-}
-.prodbutton h6{
-  font-size: 17px;
-  width: auto;
-  padding: 10px;
-    border-radius: 10px;
-}
 
-.review h1{
-  font-size: 23px;
-  padding: 20px;
-  text-align: left;
-}
-.review h2{
-    margin: 20px 20px  80px 20px;
-    font-size: 15px;
-    text-align: left;
-}
-  .nextcontent{
-    margin: 0 15px;
-  }
-  .productcubes {
-  gap: 15px 20px;  
-}
-.nextcontent h1{
-  font-size: 35px;
-}
-  .productcubes .cubes {
-    width: 160px;
-    padding: 10px;
-}
-.ncubes{
-  width: auto;
-  margin: 0 auto;
-}
-.cubes img {
-  width: auto;
-  margin: 0 auto;
-  height: 110px;
-}
-.cubes h1{
-  font-size: 16px;
-}
-.cubes .buttpri h3 {
-  font-size: 18px;
-}
-.cubes .buttpri i{
-  font-size: 16px;
-}
-.nextbuttonsearch{
-  width: auto;
-  text-align: center;
-}
-.nextbuttonsearch a{
-  font-size: 20px;
-  padding: 10px 20px;
-}
+
+
 .supportbot{
   display: block;
   text-align: center;

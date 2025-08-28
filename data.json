@@ -5,7 +5,8 @@
     "title": "Încărcător Fulbat 1000 - 6V/12V 1A",
     "oldPrice": "210 lei",
     "newPrice": "169 lei",
-    "category": "akcio"
+    "category": "elektromossag",
+    "tag": "akkumulátor"
   },
   {
     "id": "2",
@@ -13,7 +14,8 @@
     "title": "Handguard Acerbis X-Force Orange",
     "oldPrice": "120 lei",
     "newPrice": "99 lei",
-    "category": "akcio"
+    "category": "akcio",
+    "tag": "elemek"
   },
   {
     "id": "3",
@@ -21,7 +23,8 @@
     "title": "Cauciuc 180/55-17 Michelin Pilot Power 2CT",
     "oldPrice": "440 lei",
     "newPrice": "349 lei",
-    "category": "akcio"
+    "category": "akcio",
+       "tag": "futomu"
   },
   {
     "id": "4",
@@ -29,7 +32,8 @@
     "title": "Lant distributie KTM 250 05-08",
     "oldPrice": "160 lei",
     "newPrice": "129 lei",
-    "category": "akcio"
+    "category": "akcio",
+       "tag": "motor"
   },
   {
     "id": "5",
@@ -37,7 +41,8 @@
     "title": "Anvelopa moto MOTION STUFF 90/100-14 cauciuc butil Heavy Duty (2.5mm)",
     "oldPrice": "120 lei",
     "newPrice": "99 lei",
-    "category": "akcio"
+    "category": "akcio",
+       "tag": "futomu"
       },
   {
     "id": "6",
@@ -45,7 +50,8 @@
     "title": "SPRAY CURATAT LANT MOTOREX DEGREASER - 500 ML",
     "oldPrice": "40 lei",
     "newPrice": "29 lei",
-    "category": "akcio"
+    "category": "akcio",
+       "tag": "olajok"
       }, 
 
 
@@ -58,71 +64,84 @@
     "id": "7",
     "image": "image/product/kipufogo1.jpg",
     "title": "Akrapovic Slip-On Exhausts",
-    "newPrice": "744 lei"
+    "newPrice": "744 lei",
+     "tag": "kipufogo"
       },
   {
     "id": "8",
     "image": "image/product/fekbetet.jpg",
     "title": "EBC Double-H Sintered Front Brake Pads",
-    "newPrice": "320 lei"
+    "newPrice": "320 lei",
+       "tag": "fekek"
       },
   {
     "id": "9",
     "image": "image/product/kipufogo2.jpg",
     "title": "LeoVince LV-10 Slip-On Exhaust",
-    "newPrice": "925 lei"
+    "newPrice": "925 lei",
+     "tag": "kipufogo"
       },
   {
     "id": "10",
     "image": "image/product/aksi1.jpg",
     "title": "Yuasa AGM Battery",
-    "newPrice": "330 lei"
+    "newPrice": "330 lei",
+     "tag": "akkumulátor"
       },
   {
     "id": "11",
     "image": "image/product/dampers.jpg",
     "title": "Ohlins Steering Dampers",
-    "newPrice": "130 lei"
+    "newPrice": "130 lei",
+    "tag": ""
+    
     },
   {
     "id": "12",
     "image": "image/product/aksi2.jpg",
     "title": "Yuasa High Performance AGM Battery",
-    "newPrice": "370 lei"
+    "newPrice": "370 lei",
+     "tag": "akkumulátor"
   },  {
     "id": "13",
     "image": "image/product/barracuda.webp",
     "title": "Kit universal tub acceleratie BARRACUDA",
-    "newPrice": "40 lei"
+    "newPrice": "40 lei",
+       "tag": " "
       },
   {
     "id": "14",
     "image": "image/product/1000szuro.webp",
     "title": "Filtru de aer CF Moto 1000 0JYA-112000-20000",
-    "newPrice": "70 lei"
+    "newPrice": "70 lei",
+    "tag": "Szűrők"
       },
   {
     "id": "15",
     "image": "image/product/motulspray.webp",
     "title": "SPRAY UNGERE LANT MOTUL CHAIN LUBE ROAD+ C2+ PTFE - 400 ML",
-    "newPrice": "60 lei"
+    "newPrice": "60 lei",
+       "tag": "olajok"
     },
   {
     "id": "16",
     "image": "image/product/markolat.webp",
     "title": "Mansoane Basic Racing Barracuda",
-    "newPrice": "55 lei"
+    "newPrice": "55 lei",
+     "tag": "markolat"
   },
     {
     "id": "17",
     "image": "image/product/gyertya.webp",
     "title": "Bujie NGK ZFR5F-11",
-    "newPrice": "45 lei"
+    "newPrice": "45 lei",
+     "tag": "gyujtas"
   },
     {
     "id": "18",
     "image": "image/product/spray2.webp",
     "title": "Kit curatare si ungere pentru filtre de aer K&N 99-5000EU",
-    "newPrice": "35 lei"
+    "newPrice": "35 lei",
+     "tag": "olajok"
   }
 ]
